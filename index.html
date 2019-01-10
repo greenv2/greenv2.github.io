@@ -35,6 +35,7 @@
 </ul>
   <div id="aboutme" class="pages">
     <h2><span class="highlight">About Me</span></h2>
+    <div class="content">
     <img id="standing" src="img/about.png">
     <h3>Hi,</h3>
     <p>I'm a student at the College of New Jersey studying Computer Science and Interactive Media. I have passion for learning applying the intersection of art and technology. Because of this I am working on continuing my education with a focus on Human Computer Interaction </p>
@@ -64,6 +65,7 @@
       </ul>
     </div>
   </div>
+  </div>
 
   <div id="projects" class="pages">
     <h2><span class="highlight">Projects</span></h2>
@@ -85,6 +87,28 @@
 
   <div id="contact" class="pages">
     <h2><span class="highlight">Contact Me</span></h2>
+    <div class="content">
+    <form id="emailme" action="contactme.php" method="post" enctype="multipart/form-data" name="contactform">
+        <div class="namerow">
+            <label for="name"> Your name:</label>
+
+            <input id="name" class="input" name="name" type="text">
+        </div>
+        <div class="emailrow">
+            <label for="email">Your email:</label>
+
+            <input id="email" class="input" name="email" type="text" value="" />
+
+        </div>
+        <div class="messagearea">
+            <label for="message">Your message:</label>
+            <br />
+            <textarea id="message" class="input" name="message" rows="7" cols="30"></textarea>
+            <br />
+        </div>
+        <input id="submit_button" type="submit" value="Send email" />
+    </form>
+  </div>
   </div>
 
 
