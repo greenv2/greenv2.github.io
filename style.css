@@ -1,0 +1,384 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+html,
+body {
+  font-size: 62.5%;
+  height: 100%;
+  background-color: #Fff;
+  /* overflow: hidden; */
+}
+
+.home {
+  position: relative;
+  display: block;
+  height: 100%;
+  background: #FFFFFF;
+  padding: 20rem;
+  padding-top: 12rem;
+  overflow: hidden;
+  text-align: center;
+}
+.nav{
+  position: fixed;
+  margin-top: 20%;
+  margin-right: 50px;
+  right: 0;
+  top:0;
+  z-index: -2;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 18px;
+}
+.nav i{
+  font-size: 12px;
+  padding-right: 10px;
+  color: #222;
+}
+
+.nav li{
+  padding-bottom: 18px;
+  /* text-decoration: none; */
+}
+.nav a{
+  /* padding-bottom: 18px; */
+  color: #222;
+  text-decoration: none;
+}
+ul.nav {
+   list-style: none;
+}
+
+#aboutme ul{
+   list-style: none;
+}
+.pages{
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
+
+  position: relative;
+  z-index: -10;
+
+  background-color: #fff;
+  height: 100vh;
+  text-align: left;
+  display: block;
+  width: 100%;
+}
+
+.pages h2{
+  font-size: 5rem;
+  font-weight:100;
+  margin-bottom: 20px;
+  
+}
+.pages h4{
+  text-transform: uppercase;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: lighter;
+}
+
+.pages h3{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 3rem;
+  font-weight:100;
+}
+#aboutme{
+  padding-left:5%;
+}
+#aboutme p{
+  padding-right: 200px;
+  font-size:18px;
+}
+#aboutme h2{
+  /* text-decoration: underline; */
+  /* border-width: 3px;
+  border-color: #93D5D2;
+  border-style: outset; */
+
+}
+#aboutme h3{
+  float:left;
+  width:90%;
+  min-width:100px;
+}
+#standing {
+  width:10%;
+  float:left;
+}
+/* #aboutme {
+  background-color: #fff;
+  height: 100vh;
+  text-align: left;
+  display: block;
+  width: 100%;
+  overflow: hidden;
+  margin: 0 auto;
+  padding-left: 155px;
+  padding-top: 62px;
+} */
+#develop{
+  padding-right: 100px;
+  float:left;
+}
+
+#design{
+
+  float:left;
+}
+#code {
+  background-color: #fff;
+  height: 100vh;
+  text-align: left;
+  display: block;
+  width: 100%;
+  overflow: hidden;
+  margin: 0 auto;
+  padding-left: 155px;
+  padding-top: 62px;
+}
+
+.home h1 {
+  position: relative;
+  font-size: 5vw;
+  /*font-size: 7rem;*/
+  text-transform: uppercase;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
+  color: #222;
+  z-index: 10;
+  padding-bottom: 1vw;
+}
+
+.home h2 {
+  position: relative;
+  font-size: 3vw;
+  /*font-size: 4rem;*/
+  text-transform: uppercase;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: lighter;
+  color: #222;
+  z-index: 10;
+}
+
+@keyframes inout {
+  from {
+    opacity: 0
+  }
+
+  to {
+    opacity: 1
+  }
+}
+
+#down {
+  position: relative;
+  margin-top: 29vh;
+  animation: 2s linear 1s infinite alternate inout;
+  z-index: 10;
+}
+
+#desk {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width:26%;
+}
+
+@keyframes pulse {
+  from {
+    -webkit-filter: grayscale(0);
+    filter: grayscale(0);
+  }
+
+  to {
+    -webkit-filter: grayscale(1);
+    filter: grayscale(1);
+  }
+}
+
+.reveal {
+  z-index: 5;
+  position: absolute;
+  top: calc(50% - 10rem);
+  left: calc(50% - 10rem);
+  width: 20rem;
+  height: 20rem;
+  background: url('img/pathbackground.png') 50% 50% no-repeat fixed;
+  /* background-size: cover; */
+  background-size: 100% 100%;
+  border-radius: 50%;
+  animation: 5s linear 1s infinite alternate pulse;
+  /* transition: left 0.1s, top 0.1s; */
+
+}
+
+#sidepath {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  height: calc(3*100vh);
+  margin-left: -450px;
+}
+
+.highlight{
+  background-color: white;
+  background-size:100% 50%;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  background-image: url('img/high.png');
+
+}
+
+@media screen and (max-width: 1000px) {
+  .home h1 {
+     font-size: 48px;
+     color:blue;
+  }
+  .home  h2{
+     font-size: 26px;
+     color:blue;
+  }
+  .reveal{
+    display: none;
+    opacity:0;
+  }
+  #desk{
+    width:30%;
+  }
+}
+
+
+/*            *          *            *          */
+
+#projects {
+    /* text-align: center; */
+    width: 100%;
+    /* margin: 0 auto; */
+  }
+
+#projects h2{
+  padding-left: 5%;
+}
+
+
+  .macsetup {
+    text-align: center;
+    /* max-width: 44rem;
+    margin: 3.2rem auto;
+    padding: 0 1rem; */
+    width: 50%;
+    margin: 0 auto;
+
+  }
+
+  .slide {
+    width: 100%;
+    cursor:pointer;
+    /* min-width:225px; */
+  }
+
+  .zwork {
+    /* margin: 40px; */
+    display: inline-block;
+    left: 32%;
+    padding-top: 2%;
+    z-index: 2;
+    position: absolute;
+    /* width:35%; */
+
+    width: 36%;
+    margin: 0 auto;
+  }
+
+  .siema {
+    width: 100%;
+  }
+
+  .imac {
+    position: relative;
+    z-index: -10;
+    width: 80%;
+    vertical-align: middle;
+
+  }
+
+  button.prev,
+  .next {
+
+    width: auto;
+    display: inline-block;
+    border: none;
+    background: #fff;
+    /* top: 50%; */
+  }
+  .modal {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 100;
+    /* Sit on top */
+    padding-top: 100px;
+    /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black w/ opacity */
+  }
+
+  /* Modal Content */
+  .modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+  }
+
+  /* The Close Button */
+  .close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+
+  .close:hover,
+  .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+@media screen and (max-width: 500px) {
+  h1.home {
+     font-size: 48px;
+     color:red;
+  }
+  .home{
+  padding: 0;
+  padding-top:45%;
+  transition: padding ease-in;
+}
+  .reveal{
+    display: none;
+    opacity:0;
+  }
+
+}

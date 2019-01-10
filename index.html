@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Victoria Green</title>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400|Thasadith" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script src="js/jquery.visible.js"></script>
+  <script src="js/nav.js"></script>
+  <script src="js/siema.min.js"></script>
+  <script src="https://unpkg.com/scrollreveal"></script>
+  <script src="js/home.js"></script>
+
+</head>
+
+<body>
+
+  <div class="home" id="home">
+    <h1>Victoria Green</h1>
+    <h2>Developer | Designer</h2>
+    <a href="#aboutme"><img id="down" src="img/down.png"></img></a>
+    <img id="desk" src="img/desk.png">
+    <div class="reveal"></div>
+  </div>
+<ul class="nav">
+  <li ><a href="#home"> <i id="1"class="fas fa-square"></i> Home </a></li>
+  <li ><a href="#aboutme"> <i id="2"class="fas fa-square"></i> About </a></li>
+  <li ><a href="#projects"> <i id="3"class="fas fa-square"></i> Projects </a></li>
+  <li ><a href="#contact"><i id="4"class="fas fa-square"></i> Contact </a></li>
+</ul>
+  <div id="aboutme" class="pages">
+    <h2><span class="highlight">About Me</span></h2>
+    <img id="standing" src="img/about.png">
+    <h3>Hi,</h3>
+    <p>I'm a student at the College of New Jersey studying Computer Science and Interactive Media. I have passion for learning applying the intersection of art and technology. Because of this I am working on continuing my education with a focus on Human Computer Interaction </p>
+    <br>
+    <h3>Skills + Tools </h3>
+    <div id="develop">
+      <h4>Develop <img src='img/cursor.gif' height=15></h4>
+      <ul>
+        <li>C</li>
+        <li>C#</li>
+        <li>C++</li>
+        <li>Java</li>
+        <li>JavaScript</li>
+        <li>Html</li>
+        <li>Css</li>
+      </ul>
+    </div>
+
+    <div id="design">
+      <h4>Design</h4>
+      <ul>
+        <li>Affinity Designer</li>
+        <li>Adobe Illustrator</li>
+        <li>Adobe InDesign</li>
+        <li>Adobe After Effects</li>
+        <li>Sketch</li>
+      </ul>
+    </div>
+  </div>
+
+  <div id="projects" class="pages">
+    <h2><span class="highlight">Projects</span></h2>
+    <div class="macsetup">
+      <div class="zwork">
+        <div class="siema">
+          <div id="T" onclick="viewModal(1)"> <img src="img/trentemp.png" alt="Trentonian" class="slide"> </div>
+          <div id="Ha" onclick="viewModal(2)"> <img src="img/handtemp.png" alt="Handimations" class="slide"> </div>
+          <div id="Hy" onclick="viewModal(3)"> <img src="img/hypertemp.png" alt="Hyperfocus" class="slide"> </div>
+          <div id="I" onclick="viewModal(4)"> <img src="img/isutemp.png" alt="Iowa" class="slide"> </div>
+        </div>
+      </div>
+
+      <button class="prev"> <i class="fas fa-chevron-left fa-3x"></i><!-- <i class="fas fa-caret-left"></i> <img src="prev.png">--></button>
+      <img src="img/imac.png" alt="j" class="imac">
+      <button class="next"> <i class="fas fa-chevron-right fa-3x"></i></button>
+    </div>
+  </div>
+
+  <div id="contact" class="pages">
+    <h2><span class="highlight">Contact Me</span></h2>
+  </div>
+
+
+  <div id="Trentoniana" class="modal">
+
+      <!-- Modal content -->
+      <div class="modal-content">
+        <span class="close" onclick="closeIt(1)">&times;</span>
+        <p>Some text in the Modal..</p>
+      </div>
+    </div>
+    <div id="Handimations" class="modal">
+
+      <!-- Modal content -->
+      <div class="modal-content">
+        <span class="close" onclick="closeIt(2)">&times;</span>
+        <p>grrrr..</p>
+      </div>
+
+    </div>
+
+    <div id="Hyperfocus" class="modal">
+
+      <!-- Modal content -->
+      <div class="modal-content">
+        <span class="close" onclick="closeIt(3)">&times;</span>
+        <p>Some text in the Modal..</p>
+      </div>
+    </div>
+
+    <div id="ISU" class="modal">
+
+      <!-- Modal content -->
+      <div class="modal-content">
+        <span class="close" onclick="closeIt(4)">&times;</span>
+        <p>SomeNe Modal..</p>
+      </div>
+    </div>
+</body>
+<script>
+  var boxReveal = {
+  delay    : 300,
+  //distance : '50px',
+  //reset :true
+  // rotate   : { z: 6 }
+};
+
+  window.sr = ScrollReveal();
+sr.reveal('.pages',boxReveal);
+
+  </script>
+<script src="js/main.js"></script>
+<script src="js/smooth.js"></script>
+</html>
