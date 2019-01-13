@@ -1,3 +1,16 @@
+//scrollreveal
+var boxReveal = {
+delay    : 300,
+mobile : false
+//distance : '50px',
+//reset :true
+// rotate   : { z: 6 }
+};
+
+window.sr = ScrollReveal();
+sr.reveal('.pages',boxReveal);
+
+//imac gallery
 const sShow = new Siema({
     selector: '.siema',
     duration: 200,
@@ -15,6 +28,8 @@ const sShow = new Siema({
 
   document.querySelector('.prev').addEventListener('click', () => sShow.prev());
   document.querySelector('.next').addEventListener('click', () => sShow.next());
+
+//Modal Setup for Gallery
   var modal = document.getElementById('Trentoniana');
 
   function viewModal(modal) {

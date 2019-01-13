@@ -1,4 +1,5 @@
 $(document).ready(function() {
+  if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|Windows Phone/i.test(navigator.userAgent) == false) {
   console.log("start js should be working");
   var moveTimer;
   var $reveal = $(".reveal"),
@@ -29,5 +30,5 @@ $(document).ready(function() {
       });
     }, 100)
   });
-
+}
 });
