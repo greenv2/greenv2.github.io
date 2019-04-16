@@ -5,6 +5,8 @@
 @pasta: #F2EEDE;
 @dairy: #E8EEF7;
 @fruit: #C7EFCF;
+@dessert: #CFF0E7;
+
 /* General Page Styel*/
 h1 {
   font-family: 'Sacramento', cursive;
@@ -47,5 +49,79 @@ hr {
   margin-top: -20px;
   margin-bottom: 10px;
 }
+
+#viewGroceries{
+  text-align: center;
+  width: 100%;
+}
+
+
 /* Category View */
+#categoryContainer{
+  display: flex;
+  align-content: space-between;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.category {
+  width:200px;
+  height:200px;
+  min-width: 40%;
+  border: 2px solid #000;
+  border-radius: 15px;
+  text-align: center;
+  margin:15px;
+
+
+  //flex box settings
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  align-content: flex-start;
+  flex-wrap: wrap;
+
+  img{
+    width:40px;
+    height: auto;
+    padding: 15px 5px 0px 0px;
+  }
+//white-space: nowrap;
+
+  span{
+  //  white-space: nowrap;
+    width:100%;
+    color:black;
+    text-align: left;
+    padding-left: 10px;
+    padding-bottom: 5px;
+  //  font-size: 20px;
+  }
+  // div{
+  //   display: inline-block;
+  //   white-space: nowrap;
+  // }
+}
+#fruit{
+  border-color:@fruit;
+}
+#beverage{
+  border-color:@beverage;
+}
+#dessert{
+  border-color: @dessert;
+}
+#dairy{
+  border-color: @dairy;
+}
+#pasta{
+  border-color: @pasta;
+}
+
+#list, #other{
+  display: none;
+}
+
+
+
+
 /* List View*/

@@ -1,22 +1,23 @@
-function selectSVG(category){
+function addToDiv(category){
   switch(category){
     case "fruit":
-      return "svg/fruit.svg";
+      return document.getElementById('fruit');
       break;
     case "beverage":
-      return "_";
+      return document.getElementById('beverage');
       break;
     case "pasta":
-      return "_";
+      return document.getElementById('pasta');
       break;
     case "dessert":
-      return "_";
+      return document.getElementById('dessert');
       break;
     case "dairy":
-      return "_";
+      return document.getElementById('dairy');
       break;
     default:
-      return "_";
+      document.getElementById('other').style.display = "flex";
+      return document.getElementById('other');
       break;
 
   }
@@ -24,22 +25,39 @@ function selectSVG(category){
 
 
 //iterate through JSON array of grocery info
-var glist = document.getElementById('glist');
-var item;
+var fruLst = document.getElementById('fruit');
+var bevLst = document.getElementById('beverage');
+var desLst= document.getElementById('dessert');
+var daiLst = document.getElementById('dairy');
+var pasLst = document.getElementById('pasta');
+var pasLst = document.getElementById('pasta');
 var add;
-var node;
-var icon;
+var nSpan;
+var nLabel;
+var curCat;
+var curGroup;
+var nLabel;
 
 for (var i=0; i< groceries.length; i++){
   item = groceries[i];
-  console.log(item.category + "  " +item.item);
-  icon = document.createElement('svg');
-  icon.innerHTML= selectSVG(groceries[i].category);
-  add = document.createElement('Li');
-  node = document.createTextNode(item.category + "  " +item.item);
-  add.appendChild(icon);
-  add.appendChild(node);
-  glist.appendChild(add);
+  nSpan = document.createElement('span');
+  //nLabel = document.createElement('p');
+  curCat = item.category;
+  curGroup = "item_" + item.category;
+  curText = item.type + " " + item.item + ", " + item.brand + " ("+ item.qty +")" ;
+  nSpan.innerHTML="<input type='checkbox' class='"+ curGroup + "'> "+curText;
+  //node = document.createTextNode(item.category + "  " +item.item);
+
+  //nSpan.appendChild(add);
+///  nSpan.appendChild(nLabel);
+
+
+  // nSpan.innerHTML = item.category + "  " +item.item;
+  //add.appendChild(node);
+  addToDiv(item.category).appendChild(nSpan);
+  duplicate = nSpan.cloneNode(true);
+  document.getElementById("list").appendChild(duplicate);
+  document.getElementById("list").appendChild(document.createElement('br'));
 }
 
 
@@ -47,8 +65,43 @@ for (var i=0; i< groceries.length; i++){
 
 
 
+// var item;
+// var add;
+// var node;
+// var icon;
+//
+// for (var i=0; i< groceries.length; i++){
+//   item = groceries[i];
+//   console.log(item.category + "  " +item.item);
+//   icon = document.createElement('svg');
+//   icon.innerHTML= selectSVG(groceries[i].category);
+//   add = document.createElement('Li');
+//   node = document.createTextNode(item.category + "  " +item.item);
+//   add.appendChild(icon);
+//   add.appendChild(node);
+//   glist.appendChild(add);
+// }
 
-
+// for (var i=0; i< groceries.length; i++){
+//   item = groceries[i];
+//   nSpan = document.createElement('span');
+//   add = document.createElement('input');
+//   add.setAttribute("class", ("item_" + groceries[i].category));
+//   add.setAttribute("type", "radio");
+//   //add.setAttribute("content", "uhhhhh");
+//   add.setAttribute("name", groceries[i].category);
+//   nLabel = document.createElement('p');
+//   nLabel.innerHTML="im dying";
+//   //node = document.createTextNode(item.category + "  " +item.item);
+//
+//   nSpan.appendChild(add);
+//   nSpan.appendChild(nLabel);
+//
+//
+//   // nSpan.innerHTML = item.category + "  " +item.item;
+//   //add.appendChild(node);
+//   addToDiv(groceries[i].category).appendChild(nSpan);
+// }
 
 
 

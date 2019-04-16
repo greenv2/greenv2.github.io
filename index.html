@@ -1,36 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link type="text/css" href="https://fonts.googleapis.com/css?family=Quicksand|Sacramento" rel="stylesheet">
   <link type="text/less" href="style.less" rel="stylesheet">
-  <link rel="icon" href="svg/groceries.png">
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/less.js/3.9.0/less.min.js" ></script>
+  <link rel="icon" href="svg/groceries.png" type="image/ico" />
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/less.js/3.9.0/less.min.js"></script>
   <title>Groceries</title>
 </head>
+
 <body>
-<div id="titlebar">
-  <img src="svg/groceries(c).svg" alt="grocery icon" id="gicon">
-  <h1>Lets Get These Groceries</h1>
-  <hr>
-</div>
 
+  <div id="titlebar">
+    <img src="svg/groceries(c).svg" alt="grocery icon" id="gicon">
+    <h1>Lets Get These Groceries</h1>
+    <hr>
+  </div>
 
-  <ul id="glist">
+  <div id="viewGroceries">
+    <input type="radio" name="view_option" value="category" onclick="changeSettings(1)" id="catbtn" checked> Category </input>
+    <input type="radio" name="view_option" value="list" onclick="changeSettings(2)" id="listbtn"> List
+  </div>
+  <div id="categoryContainer">
+
+    <div class="category" id="fruit">
+      <img src="img/fruit.svg" alt="Fruit Category Icon"><h2>Fruit</h2>
+
+     <!-- <span><input type="radio" name="view_option" value="fruita" onclick="changeSettings(1)" id="canbtn" checked>fruit</span> -->
+    </div>
+
+    <div class="category" id="beverage">
+      <img src="img/beverage.svg" alt="Beverage Category Icon"> <h2>Beverages</h2>
+    </div>
+
+    <div class="category" id="dessert">
+      <img src="img/dessert.svg" alt="Dessert Category Icon"><h2>Dessert</h2>
+    </div>
+
+    <div class="category" id="dairy">
+      <img src="img/dairy.svg" alt="Dairy Category Icon"><h2>Dairy</h2>
+    </div>
+
+    <div class="category" id="pasta">
+      <img src="img/pasta.svg" alt="Pasta Category Icon"><h2>Pasta</h2>
+    </div>
+    <div class="category" id="other">
+      <h2>Other</h2>
+    </div>
+  </div>
+
+  <div id="list">
+
+  </div>
+
+  <!-- <ul id="glist">
     <li>1</li>
     <li>2</li>
     <li>3</li>
     <li>4</li>
     <li>5</li>
-  </ul>
+  </ul> -->
 
 
-<!-- Scripts -->
+  <!-- Scripts -->
   <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
   <script type="text/javascript" src="groceries.json"></script>
   <script type="text/javascript" src="main.js"></script>
 
+  <script>
+    //variables view toggle
+    var settings = document.getElementsByName('view_option');
+    var category = settings[0];
+    var list = settings[1];
+    var categoryStyle = document.getElementsByClassName('category');
+
+    /*
+    Function: toggleCategories
+    Purpose: toggle the display style of elements with the class category
+    Parameters: new display style as string
+    */
+
+    function toggleCategories(sett) {
+      for (var i = 0; i < categoryStyle.length; i++) {
+        categoryStyle[i].style.display = sett;
+    
+      }
+    }
+
+    /*
+    Function: changeSettings
+    Purpose: toggle view settings between cateogry and list
+    Parameters: int representing which format to use
+    1- category 2-list
+    */
+    function changeSettings(format) {
+      switch (format) {
+        case 1:
+          document.getElementById('list').style.display = "none";
+          console.log('ahhhhhhhh');
+          toggleCategories('flex');
+
+          break;
+        case 2:
+          console.log('list is checked')
+          toggleCategories("none");
+          document.getElementById('list').style.display = "block";
+          break;
+        default:
+          break;
+      }
+    }
+  </script>
+
 </body>
+
 </html>
