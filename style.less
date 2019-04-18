@@ -6,7 +6,7 @@
 @dairy: #E8EEF7;
 @fruit: #C7EFCF;
 @dessert: #CFF0E7;
-
+@other: #ECECEC;
 /* General Page Styel*/
 h1 {
   font-family: 'Sacramento', cursive;
@@ -16,6 +16,7 @@ h1 {
 
 body {
   font-family: 'Quicksand', sans-serif;
+  text-align: center;
 }
 
 #gicon {
@@ -50,29 +51,45 @@ hr {
   margin-bottom: 10px;
 }
 
-#viewGroceries{
+#viewGroceries {
   text-align: center;
   width: 100%;
 }
 
+input[type=checkbox]:checked +label {
+  text-decoration: line-through;
+}
 
+input.item_fruit[type=checkbox]:checked +label {
+  color: @fruit;
+
+  img.listView {
+    opacity: 0.3;
+  }
+}
+input.item_beverage[type=checkbox]:checked +label {
+  color: @beverage;
+
+  img.listView {
+    opacity: 0.3;
+  }
+}
 /* Category View */
-#categoryContainer{
+#categoryContainer {
   display: flex;
   align-content: space-between;
   flex-wrap: wrap;
   justify-content: center;
 }
+
 .category {
-  width:200px;
-  height:200px;
+  width: 200px;
+  height: 200px;
   min-width: 40%;
   border: 2px solid #000;
   border-radius: 15px;
   text-align: center;
-  margin:15px;
-
-
+  margin: 15px;
   //flex box settings
   display: flex;
   justify-content: center;
@@ -80,48 +97,88 @@ hr {
   align-content: flex-start;
   flex-wrap: wrap;
 
-  img{
-    width:40px;
+  img {
+    width: 40px;
     height: auto;
-    padding: 15px 5px 0px 0px;
+    padding: 15px 5px 0 0;
   }
-//white-space: nowrap;
-
-  span{
-  //  white-space: nowrap;
-    width:100%;
-    color:black;
+  //white-space: nowrap;
+  span {
+    //  white-space: nowrap;
+    width: 100%;
+    color: black;
     text-align: left;
     padding-left: 10px;
     padding-bottom: 5px;
-  //  font-size: 20px;
+    //  font-size: 20px;
+  }
+
+  .listView {
+    display: none;
   }
   // div{
   //   display: inline-block;
   //   white-space: nowrap;
   // }
 }
-#fruit{
-  border-color:@fruit;
+
+#fruit {
+  border-color: @fruit;
 }
-#beverage{
-  border-color:@beverage;
+
+#beverage {
+  border-color: @beverage;
 }
-#dessert{
+
+#dessert {
   border-color: @dessert;
 }
-#dairy{
+
+#dairy {
   border-color: @dairy;
 }
-#pasta{
+
+#pasta {
   border-color: @pasta;
 }
 
-#list, #other{
+#other {
   display: none;
+  border-color: @other;
 }
-
-
-
-
 /* List View*/
+#list {
+  display: none;
+  font-size: 20px;
+  margin: 0 auto;
+  padding-top: 20px;
+
+  span {
+    padding-bottom: 20px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    align-content: flex-start;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+
+  img.listView {
+    width: 50px;
+    padding-left: 10px;
+    padding-right: 15px;
+  }
+
+  input[type=checkbox] {
+    -ms-transform: scale(1.5);
+    /* IE */
+    -moz-transform: scale(1.5);
+    /* FF */
+    -webkit-transform: scale(1.5);
+    /* Safari and Chrome */
+    -o-transform: scale(1.5);
+    /* Opera */
+  }
+
+
+}

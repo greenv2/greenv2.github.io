@@ -23,7 +23,29 @@ function addToDiv(category){
   }
 }
 
+function pickIcon(category){
+  switch(category){
+    case "fruit":
+      return "<img src='img/fruit.svg' alt='Fruit Category Icon' class='listView'>";
+      break;
+    case "beverage":
+      return "<img src='img/beverage.svg' alt='Beverage Category Icon' class='listView'>";
+      break;
+    case "pasta":
+      return "<img src='img/pasta.svg' alt='Pasta Category Icon' class='listView'>";
+      break;
+    case "dessert":
+      return "<img src='img/dessert.svg' alt='Dessert Category Icon' class='listView'>";
+      break;
+    case "dairy":
+      return "<img src='img/dairy.svg' alt='Dairy Category Icon' class='listView'>";
+      break;
+    default:
+      return "_";
+      break;
 
+  }
+}
 //iterate through JSON array of grocery info
 var fruLst = document.getElementById('fruit');
 var bevLst = document.getElementById('beverage');
@@ -44,20 +66,12 @@ for (var i=0; i< groceries.length; i++){
   //nLabel = document.createElement('p');
   curCat = item.category;
   curGroup = "item_" + item.category;
-  curText = item.type + " " + item.item + ", " + item.brand + " ("+ item.qty +")" ;
-  nSpan.innerHTML="<input type='checkbox' class='"+ curGroup + "'> "+curText;
-  //node = document.createTextNode(item.category + "  " +item.item);
-
-  //nSpan.appendChild(add);
-///  nSpan.appendChild(nLabel);
-
-
-  // nSpan.innerHTML = item.category + "  " +item.item;
-  //add.appendChild(node);
+  curText = item.brand + ", " +item.type + " " + item.item + " ("+ item.qty +")" ;
+  nSpan.innerHTML=  " <input type='checkbox' class='"+ curGroup + "' id='"+i+"_" + item.category +"'> "+ "<label for='"+i+"_" + item.category +"'>" + pickIcon(item.category) + curText +"</label>";
   addToDiv(item.category).appendChild(nSpan);
   duplicate = nSpan.cloneNode(true);
   document.getElementById("list").appendChild(duplicate);
-  document.getElementById("list").appendChild(document.createElement('br'));
+//document.getElementById("list").appendChild(document.createElement('br'));
 }
 
 
@@ -102,18 +116,6 @@ for (var i=0; i< groceries.length; i++){
 //   //add.appendChild(node);
 //   addToDiv(groceries[i].category).appendChild(nSpan);
 // }
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 //
