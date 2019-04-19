@@ -67,6 +67,7 @@ input.item_fruit[type=checkbox]:checked +label {
     opacity: 0.3;
   }
 }
+
 input.item_beverage[type=checkbox]:checked +label {
   color: @beverage;
 
@@ -74,6 +75,36 @@ input.item_beverage[type=checkbox]:checked +label {
     opacity: 0.3;
   }
 }
+
+input.item_dessert[type=checkbox]:checked +label {
+  color: @dessert;
+
+  img.listView {
+    opacity: 0.3;
+  }
+}
+
+input.item_dairy[type=checkbox]:checked +label {
+  color: @dairy;
+
+  img.listView {
+    opacity: 0.3;
+  }
+}
+
+input.item_pasta[type=checkbox]:checked +label {
+  color: @pasta;
+
+  img.listView {
+    opacity: 0.3;
+  }
+}
+#other{
+  input[type=checkbox]:checked +label {
+    color: @other;
+  }
+}
+
 /* Category View */
 #categoryContainer {
   display: flex;
@@ -84,12 +115,14 @@ input.item_beverage[type=checkbox]:checked +label {
 
 .category {
   width: 200px;
-  height: 200px;
+  height: auto;
+  min-height: 200px;
   min-width: 40%;
   border: 2px solid #000;
   border-radius: 15px;
   text-align: center;
   margin: 15px;
+  padding: 2px;
   //flex box settings
   display: flex;
   justify-content: center;
@@ -102,24 +135,19 @@ input.item_beverage[type=checkbox]:checked +label {
     height: auto;
     padding: 15px 5px 0 0;
   }
-  //white-space: nowrap;
+
   span {
-    //  white-space: nowrap;
     width: 100%;
     color: black;
     text-align: left;
     padding-left: 10px;
     padding-bottom: 5px;
-    //  font-size: 20px;
+    list-style-position: outside;
   }
 
   .listView {
     display: none;
   }
-  // div{
-  //   display: inline-block;
-  //   white-space: nowrap;
-  // }
 }
 
 #fruit {
@@ -159,8 +187,15 @@ input.item_beverage[type=checkbox]:checked +label {
     justify-content: left;
     align-items: center;
     align-content: flex-start;
-    flex-wrap: wrap;
+  //  flex-wrap: wrap;
     width: 100%;
+  }
+
+  label {
+    display: flex;
+    align-items: center;
+    align-content: flex-start;
+    flex-wrap: wrap;
   }
 
   img.listView {
@@ -179,6 +214,4 @@ input.item_beverage[type=checkbox]:checked +label {
     -o-transform: scale(1.5);
     /* Opera */
   }
-
-
 }

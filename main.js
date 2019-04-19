@@ -46,6 +46,50 @@ function pickIcon(category){
 
   }
 }
+
+//variables view toggle
+var settings = document.getElementsByName('view_option');
+var category = settings[0];
+var list = settings[1];
+var categoryStyle = document.getElementsByClassName('category');
+
+/*
+Function: toggleCategories
+Purpose: toggle the display style of elements with the class category
+Parameters: new display style as string
+*/
+
+function toggleCategories(sett) {
+  for (var i = 0; i < categoryStyle.length; i++) {
+    categoryStyle[i].style.display = sett;
+
+  }
+}
+
+/*
+Function: changeSettings
+Purpose: toggle view settings between cateogry and list
+Parameters: int representing which format to use
+1- category 2-list
+*/
+function changeSettings(format) {
+  switch (format) {
+    case 1:
+      document.getElementById('list').style.display = "none";
+      console.log('ahhhhhhhh');
+      toggleCategories('flex');
+
+      break;
+    case 2:
+      console.log('list is checked')
+      toggleCategories("none");
+      document.getElementById('list').style.display = "inline-block";
+      break;
+    default:
+      break;
+  }
+}
+
 //iterate through JSON array of grocery info
 var fruLst = document.getElementById('fruit');
 var bevLst = document.getElementById('beverage');
@@ -73,7 +117,6 @@ for (var i=0; i< groceries.length; i++){
   document.getElementById("list").appendChild(duplicate);
 //document.getElementById("list").appendChild(document.createElement('br'));
 }
-
 
 
 
