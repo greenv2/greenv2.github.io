@@ -50,7 +50,7 @@ function pickIcon(category) {
       return "<img src='img/dairy.svg' alt='Dairy Category Icon' class='listView'>";
       break;
     default:
-      return "_";
+      return "<img src='img/other.svg' alt='Other Food Category Icon' class='listView'>";
       break;
 
   }
@@ -111,7 +111,7 @@ var idItem;
 /**********************************************
 
 Purpose: iterate through JSON array of grocery info
-creating elements and sorting into corresponding dibs
+creating elements and sorting into corresponding divs
 
 **********************************************/
 for (var i = 0; i < groceries.length; i++) {
@@ -130,12 +130,12 @@ for (var i = 0; i < groceries.length; i++) {
 /**********************************************
   Function: checkIt
   Purpose: updated the hidden list when the displayed one is changed
-  uses the global variable currentView
+  uses the variable currentView
   Parameters: id number of item being updated
 **********************************************/
 function checkIt(iNum) {
   var itemId = 'item_' + iNum;
-  
+
   switch (currentView) {
     case 1:
       document.getElementById('list').getElementsByClassName(itemId)[0].checked = document.getElementById('categoryContainer').getElementsByClassName(itemId)[0].checked;

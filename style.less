@@ -101,11 +101,14 @@ input.item_pasta[type=checkbox]:checked +label {
     opacity: 0.3;
   }
 }
-#other{
+//default for items not within a valid category
   input[type=checkbox]:checked +label {
     color: @other;
+    img.listView {
+      opacity: 0.3;
+    }
   }
-}
+
 
 /* Category View */
 #categoryContainer {
