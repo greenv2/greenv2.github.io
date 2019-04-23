@@ -6,6 +6,7 @@ Generate a Grocery list based on the JSON file and display with the correspondin
 * used svg icons from the noun project
 * created a list view and category view since people organize lists differently
 * kept the default styles for the radio buttons and checkbox inputs
+* handles the possibility of an item having an unknown category
 
 ## Accessibility
 * added descriptive alt tags to all the images used
