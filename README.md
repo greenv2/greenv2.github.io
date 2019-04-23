@@ -1,5 +1,5 @@
 # Lets Get These Groceries
-Generate a Grocery list based on the JSON file and display with corresponding svg icon
+Generate a Grocery list based on the JSON file and display with the corresponding svg icon
 
 ## Design Decisions
 * used light mininal colors since the page relates to food
