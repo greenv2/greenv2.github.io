@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link type="text/css" href="https://fonts.googleapis.com/css?family=Quicksand|Sacramento" rel="stylesheet">
+  <link type="text/less" href="style.less" rel="stylesheet">
+  <link rel="icon" href="img/groceries.png" type="image/ico" />
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/less.js/3.9.0/less.min.js"></script>
+  <title>Groceries</title>
+</head>
+
+<body>
+  <!-- Heading w/image -->
+  <div id="titlebar">
+    <img src="img/groceries.svg" alt="grocery basket icon" id="gicon">
+    <h1>Lets Get These Groceries</h1>
+    <hr>
+  </div>
+
+  <!-- toggle view between list and category  -->
+  <div id="viewGroceries">
+    <input type="radio" name="view_option" value="category" onclick="changeSettings(1)" id="catbtn" checked> Category </input>
+    <input type="radio" name="view_option" value="list" onclick="changeSettings(2)" id="listbtn"> List
+  </div>
+
+  <!-- div for category view -->
+  <div id="categoryContainer">
+
+    <div class="category" id="fruit">
+      <img src="img/fruit.svg" alt="Fruit Category Icon"><h2>Fruit</h2>
+    </div>
+
+    <div class="category" id="beverage">
+      <img src="img/beverage.svg" alt="Beverage Category Icon"> <h2>Beverages</h2>
+    </div>
+
+    <div class="category" id="dessert">
+      <img src="img/dessert.svg" alt="Dessert Category Icon"><h2>Dessert</h2>
+    </div>
+
+    <div class="category" id="dairy">
+      <img src="img/dairy.svg" alt="Dairy Category Icon"><h2>Dairy</h2>
+    </div>
+
+    <div class="category" id="pasta">
+      <img src="img/pasta.svg" alt="Pasta Category Icon"><h2>Pasta</h2>
+    </div>
+    <div class="category" id="other">
+      <h2>Other</h2>
+    </div>
+  </div>
+
+  <!-- div for list view -->
+  <div id="list">
+
+  </div>
+
+  <!-- Scripts -->
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="groceries.json"></script>
+  <script type="text/javascript" src="main.js"></script>
+
+</body>
+
+</html>

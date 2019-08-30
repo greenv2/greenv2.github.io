@@ -4,65 +4,287 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link type="text/css" href="https://fonts.googleapis.com/css?family=Quicksand|Sacramento" rel="stylesheet">
-  <link type="text/less" href="style.less" rel="stylesheet">
-  <link rel="icon" href="img/groceries.png" type="image/ico" />
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/less.js/3.9.0/less.min.js"></script>
-  <title>Groceries</title>
+  <title>Victoria Green</title>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400|Thasadith" rel="stylesheet">
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-102564956-2"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-102564956-2');
+</script>
+
+  <link rel="icon" href="img/desk.png">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script src="js/jquery.visible.js"></script>
+  <script src="js/nav.js"></script>
+  <script src="js/siema.min.js"></script>
+  <script src="js/scrollreveal.min.js"></script>
+  <script src="js/home.js"></script>
+
 </head>
 
 <body>
-  <!-- Heading w/image -->
-  <div id="titlebar">
-    <img src="img/groceries.svg" alt="grocery basket icon" id="gicon">
-    <h1>Lets Get These Groceries</h1>
-    <hr>
+
+  <div class="home" id="home">
+    <h1>Victoria Green</h1>
+    <h2>Developer | Designer</h2>
+    <a href="#aboutme"><img id="down" src="img/down.png"></a>
+    <img id="desk" src="img/desk.png" alt='desk'>
+    <div class="reveal"></div>
   </div>
-
-  <!-- toggle view between list and category  -->
-  <div id="viewGroceries">
-    <input type="radio" name="view_option" value="category" onclick="changeSettings(1)" id="catbtn" checked> Category </input>
-    <input type="radio" name="view_option" value="list" onclick="changeSettings(2)" id="listbtn"> List
-  </div>
-
-  <!-- div for category view -->
-  <div id="categoryContainer">
-
-    <div class="category" id="fruit">
-      <img src="img/fruit.svg" alt="Fruit Category Icon"><h2>Fruit</h2>
-    </div>
-
-    <div class="category" id="beverage">
-      <img src="img/beverage.svg" alt="Beverage Category Icon"> <h2>Beverages</h2>
-    </div>
-
-    <div class="category" id="dessert">
-      <img src="img/dessert.svg" alt="Dessert Category Icon"><h2>Dessert</h2>
-    </div>
-
-    <div class="category" id="dairy">
-      <img src="img/dairy.svg" alt="Dairy Category Icon"><h2>Dairy</h2>
-    </div>
-
-    <div class="category" id="pasta">
-      <img src="img/pasta.svg" alt="Pasta Category Icon"><h2>Pasta</h2>
-    </div>
-    <div class="category" id="other">
-      <h2>Other</h2>
+  <ul class="nav">
+    <li><a href="#home"> <i id="1" class="fas fa-square"></i> Home </a></li>
+    <li><a href="#aboutme"> <i id="2" class="fas fa-square"></i> About </a></li>
+    <li><a href="#projects"> <i id="3" class="fas fa-square"></i> Projects </a></li>
+    <li><a href="#contact"><i id="4" class="fas fa-square"></i> Contact </a></li>
+  </ul>
+  <div id="header_wrap">
+    <div id="header">
+      <a href="#home">
+        <div id="logo">
+        </div>
+      </a>
+      <div class="mobile_nav"><i class="fas fa-bars"></i></div>
+      <div class="mobile_nav_menu">
+        <div class="mobile_menu">
+          <a href="#home">Home <i class="fas fa-square " style='font-size:12px;'></i></a>
+          <br>
+          <a href="#aboutme">About <i class="fas fa-square " style='font-size:12px;'></i></a>
+          <br>
+          <a href="#projects">Projects <i class="fas fa-square " style='font-size:12px;'></i></a>
+          <br>
+          <a href="#contact">Contact <i class="fas fa-square " style='font-size:12px;'></i></a>
+        </div>
+        <div class="mobile_close"> <i class="fas fa-times"></i></div>
+      </div>
     </div>
   </div>
 
-  <!-- div for list view -->
-  <div id="list">
+
+  <div id="aboutme" class="pages">
+    <h2><span class="highlight">About Me</span></h2>
+    <div class="content">
+      <img id="standing" src="img/about.png" alt='standing'>
+      <h3>Hi,</h3>
+      <p>I'm a student at The College of New Jersey studying Computer Science and Interactive Multimedia. I have passion for learning and creating anything related to the intersection of art and technology. Because of this, I am working on continuing my education with a focus on Human Computer Interaction. </p>
+      <br>
+      <h3>Skills + Tools </h3>
+      <div id="develop">
+        <h4>Develop <img src='img/cursor.gif' height=15 alt='cursor'></h4>
+        <ul>
+          <li>C</li>
+          <li>C#</li>
+          <li>C++</li>
+          <li>Java</li>
+          <li>JavaScript</li>
+          <li>Html</li>
+          <li>Css</li>
+        </ul>
+      </div>
+
+      <div id="design">
+        <h4><span id="designb">Design</span></h4>
+        <ul>
+          <li>Affinity Designer</li>
+          <li>Adobe Illustrator</li>
+          <li>Adobe InDesign</li>
+          <li>Adobe After Effects</li>
+          <li>Sketch</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div id="projects" class="pages">
+    <h2><span class="highlight">Projects</span></h2>
+    <div class="macsetup">
+      <div class="zwork">
+        <div class="siema">
+          <div id="T" onclick="viewModal(1)"> <img src="img/trentemp.png" alt="Trentonian" class="slide"> </div>
+          <div id="Ha" onclick="viewModal(2)"> <img src="img/handtemp.png" alt="Handimations" class="slide"> </div>
+          <div id="Hy" onclick="viewModal(3)"> <img src="img/hypertemp.png" alt="Hyperfocus" class="slide"> </div>
+          <div id="I" onclick="viewModal(4)"> <img src="img/isutemp.png" alt="Iowa" class="slide"> </div>
+        </div>
+      </div>
+
+      <button class="prev"> <i class="fas fa-chevron-left fa-3x"></i><!-- <i class="fas fa-caret-left"></i> <img src="prev.png">--></button>
+      <img src="img/imac.png" alt="j" class="imac">
+      <button class="next"> <i class="fas fa-chevron-right fa-3x"></i></button>
+    </div>
+    <p>Use the < arrows > to navigate through my recent projects. Click on the mini screen for more information.</p>
+  </div>
+
+  <div id="contact" class="pages">
+    <h2><span class="highlight">Contact Me</span></h2>
+    <div class="content">
+      <form id="emailme" action="contactme.php" method="post" enctype="multipart/form-data" name="contactform">
+        <div class="namerow">
+          <label for="name"> Your name:</label>
+
+          <input id="name" class="input" name="name" type="text">
+        </div>
+        <div class="emailrow">
+          <label for="email">Your email:</label>
+
+          <input id="email" class="input" name="email" type="text" value="" />
+
+        </div>
+        <div class="messagearea">
+          <label for="message">Your message:</label>
+          <br />
+          <textarea id="message" class="input" name="message" rows="7" cols="30"></textarea>
+          <br />
+        </div>
+        <input id="submit_button" type="submit" value="Send email" />
+      </form>
+
+      <div class="social">
+        <ul>
+          <li><a href="https://github.com/greenv2"><i class="fab fa-github"></i></a></li>
+          <li><a href="https://www.linkedin.com/in/victoria-green-04932912b/"><i class="fab fa-linkedin"></i></a></li>
+          <li><a href="https://www.redbubble.com/people/vgreen3?asc=u"><svg viewBox='0 0 24 24' id='rb'>
+                <path d="M16.633 16.324h-3.199a.321.321 0 0 1-.32-.322V7.974a.32.32 0 0 1 .32-.32H16.4c2.226 0 2.693 1.31 2.693 2.408 0 .636-.169 1.14-.504 1.511.816.337 1.256 1.096 1.256 2.194 0 1.601-1.201 2.557-3.212 2.557m-4.644 0H5.345a.32.32 0 0 1-.32-.322V7.974a.32.32 0 0 1 .32-.32h3.103c1.939 0 3.096 1.043 3.096 2.791 0 1.163-.585 2.077-1.527 2.448l2.21 2.897a.322.322 0 0 1-.24.533M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12c6.628 0 12-5.373 12-12S18.63 0 12.001 0"></path>
+              </svg></a></li>
+
+        </ul>
+      </div>
+    </div>
+  </div>
+
+
+  <div id="Trentoniana" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+      <span class="close" onclick="closeIt(1)">&times;</span>
+      <h2><span class="highlight red">Trentoniana</span></h2>
+      <br>
+      <h3>Description</h3>
+      <p>Trentoniana is a museum in the Trenton Free Public Library. As a project for the Design Perspectives Course within the Interactive Multimedia Department we were tasked with creating an interactive kiosk to showcase the artifacts and encourage visitors to interact with them. Groups were assigned to gather documents, videos and maps. My group was tasked with creating the actual application.</p>
+  <br>
+      <h3>Process</h3>
+      <ul>
+        <li>My group interviewed the staff of the Trenton Free Public Library to gather requirements for the program</li>
+        <li>We divided up the work exploring different map systems to use for the kiosk</li>
+        <li>The other two members worked on implementing the ArcGIS system while I worked with Google Maps</li>
+        <li>Provided a style guide from the design standards group in the class, I created an <a href="https://sketch.cloud/s/2xpJe/PGxqG4P/play">interactive visual prototype</a> using Sketch</li>
+        <li>Using this prototype we gathered feedback from the staff and used it when creating the actual site</li>
+      </ul>
+      <br>
+      <h3>Outcome</h3>
+      <p>I created a higher fidelity prototype using HTML, CSS, JS, and the Google Maps API. The source code can be viewed <a href="https://github.com/greenv2/Trentoniana">here</a>. See screenshots of the prototype below.</p>
+      <img src="img/Trentoniana1.png" alt="startpage" class='library'>
+      <img src="img/Trentoniana2.png" alt="modernday" class='library'>
+      <img src="img/Trentoniana3.png" alt="historical" class='library'>
+    </div>
+  </div>
+  <div id="Handimations" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+
+      <span class="close" onclick="closeIt(2)">&times;</span>
+      <h2><span class="highlight purple">Handimations</span></h2>
+      <br>
+      <h3>Description</h3>
+      <p>Handimations is a drawing application that utilizes the LeapMotion hand sensor to allow users to draw their own flipbook gifs. No sticky-notes or art supplies needed! This project was developed in Fall 2018 as a final project for CSC 355: Human Computer Interaction at The College of New Jersey. </p>
+<br>
+      <h3>Process</h3>
+      <ul>
+        <li>I worked on a team of four so the work was divided up accordingly</li>
+        <li>We familiarized ourselves with the LeapMotion Javascript API</li>
+        <li>I mainly focused on the User Interface and fine tuning the interaction gestures for drawing/erasing on the canvas</li>
+        <li>As the final project evaluation we created a survey and had about 20 people evaluate our application</li>
+        <li>The results confirmed that a majority of the users had fun while using the application and only 2 out of 20 were bothered by the fatigue from drawing</li>
+      </ul>
+      <br>
+      <h3>Outcome</h3>
+    <p>Below are the gestures created and a screenshot of the user interface</p>
+    <img class="library" src="img/gestures.png" alt="gestures">
+    <img class= "library" src="img/handimations.png" alt="screenshot">
+    </div>
 
   </div>
 
-  <!-- Scripts -->
-  <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-  <script type="text/javascript" src="groceries.json"></script>
-  <script type="text/javascript" src="main.js"></script>
+  <div id="Hyperfocus" class="modal">
 
+    <!-- Modal content -->
+    <div class="modal-content">
+      <span class="close" onclick="closeIt(3)">&times;</span>
+      <h2><span class="highlight">Hyperfocus</span></h2>
+      <br>
+      <h3>Description</h3>
+      <p>Hyperfocus is a web based application that will assist students with learning disabilities centering around Executive Function Disorder (EFD). Executive functions include the cognitive and mental capabilities that allow people to be goal-oriented, focused and organized. Executive function is highly connected to Attention Deficit Disorder (ADD or ADHD). People who have this disorder are more motivated by short-term goals and activities. Approaching this issue from the point of view of a student learning and studying takes a lot more effort for people with EFD and ADD. The web application will act as study guide generator that will allow them to quickly input the information and output a fully formatted and organized study guide.</p>
+      <br>
+      <h3>Process</h3>
+      <ul>
+        <li>Planned out the base functionality </li>
+        <li>Designed mockups for the user interface</li>
+        <li>Started Learning Ruby on Rails and hosting on a virtual machine</li>
+        <li>Began implementing the base functionality with the start page and the dynamic form</li>
+        <li>Redesigned the user interface to be more minimal and less distracting</li>
+        <li>Finalized prototype by adding pdf export functionality</li>
+      </ul>
+      <br>
+      <h3>Outcome</h3>
+      <p>The source code can be viewed <a href="https://github.com/greenv2/Hyperfocus">here</a>. See screenshots of the prototype below.</p>
+      <img src="img/hyperfocus1.png" alt="hyperhome" class="library">
+      <img src="img/hyperfocus3.png" alt="hyperstudy" class="library">
+      <img src="img/hyperfocus2.png" alt="hyperexport" class="library">
+    </div>
+  </div>
+
+  <div id="ISU" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+      <span class="close" onclick="closeIt(4)">&times;</span>
+      <h2><span class="highlight yellow">Iowa State University Undergraduate Research Experience</span></h2>
+      <br>
+      <h3>Description</h3>
+      <p>A web application to teach complex indoor climate control concepts to underserved populations whose homes are not prepared for extreme weather.</p>
+      <br>
+      <h3>Process</h3>
+      <ul>
+        <li>Since this was an ongoing project, we reviewed past surveys in order to understand the target population and their current knowledge of indoor climate control</li>
+        <li>Conducted a Literature Review to figure out the best way to teach the concepts</li>
+        <li>Created User Stories to gain insight</li>
+        <li>Created paper prototypes to figure out the flow of interaction</li>
+        <li>Using ReactJS we created a functional web application available in two languages</li>
+        <li>Conducted a pilot study through the use of surveys and walked the volunteers through scenarios</li>
+        <li>Created a poster and paper that we submitted for publication</li>
+      </ul>
+      <br>
+      <h3>Outcome</h3>
+      <p>Find the poster we created <a href="img/REU poster 2x3 (Final).pdf">here</a>. See Screenshots below</p>
+      <img src="img/isu3.png" alt="home" class="library">
+      <img src="img/isu5.png" alt="homesp" class="library">
+      <img src="img/isu1.png" alt="start form" class="library">
+      <img src="img/isu4.png" alt="different house" class="library">
+      <img src="img/isu6.png" alt="interaction" class="library">
+    </div>
+  </div>
+  <script>
+    /*Mobile Navigation*/
+    $(".mobile_nav").click(function() {
+      $(".mobile_nav_menu").animate({
+        right: 0
+      });
+    })
+    $(".mobile_close").click(function() {
+      $(".mobile_nav_menu").animate({
+        right: -270
+      });
+    });
+  </script>
 </body>
+
+<script src="js/main.js"></script>
+<script src="js/smooth.js"></script>
 
 </html>
