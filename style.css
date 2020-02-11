@@ -148,8 +148,14 @@ ul.nav {
   float: left;
 }
 
+#research{
+  padding-right: 100px;
+  float: left;
+}
+
 #design {
   float: left;
+  padding-bottom: 10px;
 }
 
 /* #code {
@@ -256,6 +262,11 @@ ul.nav {
 
 .highlight.yellow {
   background-image: url('img/yhigh.png');
+}
+.highlight.blue {
+  background-image: url('img/yhigh.png');
+  filter:hue-rotate(90deg);
+
 }
 
 .highlight {
@@ -540,6 +551,7 @@ textarea#message {
   font-family: 'Montserrat', sans-serif;
   width: 133.996px;
   height: 37.394px;
+  font-size: 16px;
 }
 
 #submit_button:hover {
