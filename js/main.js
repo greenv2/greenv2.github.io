@@ -51,6 +51,9 @@ const sShow = new Siema({
       case 4:
         modal = document.getElementById('ISU');
         break; //isu reu
+      case 5:
+        modal = document.getElementById('PaperPlanes');
+        break;
     }
     modal.style.display = "block";
 
@@ -81,6 +84,9 @@ const sShow = new Siema({
       case 4:
         modal = document.getElementById('ISU');
         break; //isu reu
+      case 5:
+        modal = document.getElementById('PaperPlanes');
+        break;
     }
     modal.style.display = "none";
 

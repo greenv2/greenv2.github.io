@@ -32,7 +32,7 @@
 
   <div class="home" id="home">
     <h1>Victoria Green</h1>
-    <h2>Developer | Designer</h2>
+    <h2>UX Designer</h2>
     <a href="#aboutme"><img id="down" src="img/down.png"></a>
     <img id="desk" src="img/desk.png" alt='desk'>
     <div class="reveal"></div>
@@ -71,10 +71,12 @@
     <div class="content">
       <img id="standing" src="img/about.png" alt='standing'>
       <h3>Hi,</h3>
-      <p>I'm a student at The College of New Jersey studying Computer Science and Interactive Multimedia. I have passion for learning and creating anything related to the intersection of art and technology. Because of this, I am working on continuing my education with a focus on Human Computer Interaction. </p>
+      <p>I'm a user experience designer with a strong background in visual design, which I use towards creating meaningful experiences.  I am currently pursuing a Master's in Human Computer Interaction at Georigia Tech and actively seeking
+        opportunities to create, design and engage in problem-solving.</p>
       <br>
       <h3>Skills + Tools </h3>
-      <div id="develop">
+
+      <!-- <div id="develop">
         <h4>Develop <img src='img/cursor.gif' height=15 alt='cursor'></h4>
         <ul>
           <li>C</li>
@@ -85,16 +87,39 @@
           <li>Html</li>
           <li>Css</li>
         </ul>
-      </div>
+      </div> -->
 
       <div id="design">
         <h4><span id="designb">Design</span></h4>
         <ul>
+          <li>Wireframing</li>
+          <li>Prototyping</li>
+          <li>Mockups</li>
+          <li>Storyboarding</li>
+          <li>Graphic Design</li>
+          <li>Illustration</li>
+
+          <br>
+
           <li>Affinity Designer</li>
           <li>Adobe Illustrator</li>
           <li>Adobe InDesign</li>
           <li>Adobe After Effects</li>
+          <li>Figma</li>
           <li>Sketch</li>
+          <li>HTML, CSS, JS </li>
+
+        </ul>
+      </div>
+      <div id="research">
+        <h4>Research</h4>
+        <ul>
+          <li>Personas</li>
+          <li>Affinity mapping</li>
+          <li>Usability Evaluation</li>
+          <li>Participatory Design</li>
+          <li>Cognitive walkthroughs</li>
+          <li>User flows</li>
         </ul>
       </div>
     </div>
@@ -105,10 +130,13 @@
     <div class="macsetup">
       <div class="zwork">
         <div class="siema">
-          <div id="T" onclick="viewModal(1)"> <img src="img/trentemp.png" alt="Trentonian" class="slide"> </div>
+          <!-- <div id="P" onclick="window.location.href = 'paperplanes.html';"> <img src="img/papertemp.png" alt="PaperPlanes" class="slide"> </div> -->
+          <div id="P" onclick="viewModal(5)"> <img src="img/papertemp.png" alt="PaperPlanes" class="slide"> </div>
+          <div id="T" onclick="viewModal(1)"> <img src="img/trentemp.png" alt="Trentoniana" class="slide"> </div>
           <div id="Ha" onclick="viewModal(2)"> <img src="img/handtemp.png" alt="Handimations" class="slide"> </div>
           <div id="Hy" onclick="viewModal(3)"> <img src="img/hypertemp.png" alt="Hyperfocus" class="slide"> </div>
           <div id="I" onclick="viewModal(4)"> <img src="img/isutemp.png" alt="Iowa" class="slide"> </div>
+
         </div>
       </div>
 
@@ -116,7 +144,7 @@
       <img src="img/imac.png" alt="j" class="imac">
       <button class="next"> <i class="fas fa-chevron-right fa-3x"></i></button>
     </div>
-    <p>Use the < arrows > to navigate through my recent projects. Click on the mini screen for more information.</p>
+    <p>Use the < arrows> to navigate through my recent projects. Click on the mini screen for more information.</p>
   </div>
 
   <div id="contact" class="pages">
@@ -140,7 +168,9 @@
           <textarea id="message" class="input" name="message" rows="7" cols="30"></textarea>
           <br />
         </div>
-        <input id="submit_button" type="submit" value="Send email" />
+        <a href="mailto:vgreen.ux@gmail.com">
+          <div id="submit_button"> Send Email</div>
+        </a>
       </form>
 
       <div class="social">
@@ -165,8 +195,9 @@
       <h2><span class="highlight red">Trentoniana</span></h2>
       <br>
       <h3>Description</h3>
-      <p>Trentoniana is a museum in the Trenton Free Public Library. As a project for the Design Perspectives Course within the Interactive Multimedia Department we were tasked with creating an interactive kiosk to showcase the artifacts and encourage visitors to interact with them. Groups were assigned to gather documents, videos and maps. My group was tasked with creating the actual application.</p>
-  <br>
+      <p>Trentoniana is a museum in the Trenton Free Public Library. As a project for the Design Perspectives Course within the Interactive Multimedia Department we were tasked with creating an interactive kiosk to showcase the artifacts and
+        encourage visitors to interact with them. Groups were assigned to gather documents, videos and maps. My group was tasked with creating the actual application.</p>
+      <br>
       <h3>Process</h3>
       <ul>
         <li>My group interviewed the staff of the Trenton Free Public Library to gather requirements for the program</li>
@@ -192,8 +223,9 @@
       <h2><span class="highlight purple">Handimations</span></h2>
       <br>
       <h3>Description</h3>
-      <p>Handimations is a drawing application that utilizes the LeapMotion hand sensor to allow users to draw their own flipbook gifs. No sticky-notes or art supplies needed! This project was developed in Fall 2018 as a final project for CSC 355: Human Computer Interaction at The College of New Jersey. </p>
-<br>
+      <p>Handimations is a drawing application that utilizes the LeapMotion hand sensor to allow users to draw their own flipbook gifs. No sticky-notes or art supplies needed! This project was developed in Fall 2018 as a final project for CSC 355:
+        Human Computer Interaction at The College of New Jersey. </p>
+      <br>
       <h3>Process</h3>
       <ul>
         <li>I worked on a team of four so the work was divided up accordingly</li>
@@ -204,9 +236,9 @@
       </ul>
       <br>
       <h3>Outcome</h3>
-    <p>Below are the gestures created and a screenshot of the user interface</p>
-    <img class="library" src="img/gestures.png" alt="gestures">
-    <img class= "library" src="img/handimations.png" alt="screenshot">
+      <p>Below are the gestures created and a screenshot of the user interface</p>
+      <img class="library" src="img/gestures.png" alt="gestures">
+      <img class="library" src="img/handimations.png" alt="screenshot">
     </div>
 
   </div>
@@ -219,7 +251,10 @@
       <h2><span class="highlight">Hyperfocus</span></h2>
       <br>
       <h3>Description</h3>
-      <p>Hyperfocus is a web based application that will assist students with learning disabilities centering around Executive Function Disorder (EFD). Executive functions include the cognitive and mental capabilities that allow people to be goal-oriented, focused and organized. Executive function is highly connected to Attention Deficit Disorder (ADD or ADHD). People who have this disorder are more motivated by short-term goals and activities. Approaching this issue from the point of view of a student learning and studying takes a lot more effort for people with EFD and ADD. The web application will act as study guide generator that will allow them to quickly input the information and output a fully formatted and organized study guide.</p>
+      <p>Hyperfocus is a web based application that will assist students with learning disabilities centering around Executive Function Disorder (EFD). Executive functions include the cognitive and mental capabilities that allow people to be
+        goal-oriented, focused and organized. Executive function is highly connected to Attention Deficit Disorder (ADD or ADHD). People who have this disorder are more motivated by short-term goals and activities. Approaching this issue from the
+        point of view of a student learning and studying takes a lot more effort for people with EFD and ADD. The web application will act as study guide generator that will allow them to quickly input the information and output a fully formatted
+        and organized study guide.</p>
       <br>
       <h3>Process</h3>
       <ul>
@@ -267,6 +302,76 @@
       <img src="img/isu1.png" alt="start form" class="library">
       <img src="img/isu4.png" alt="different house" class="library">
       <img src="img/isu6.png" alt="interaction" class="library">
+    </div>
+  </div>
+
+  <div id="PaperPlanes" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+      <span class="close" onclick="closeIt(5)">&times;</span>
+      <h2><span class="highlight blue">Paper Planes</span></h2>
+      <br>
+      <h3>Description</h3>
+      <p>A system that aims to connect travelers from all walks of life. Creating a living and growing community interlinked through the stories they choose to share.</p>
+      <br>
+      <h3>Overview</h3>
+      <p>Duration: 3 Months</p>
+      <p>Collaboration: Team of 5</p>
+      <p>Role: Visual Designer, UX Designer </p>
+      <p>Tools: Affinity Designer (Illustrator), Figma, Miro</p>
+      <br>
+      <h3>Process</h3>
+      <ol>
+        <li>Exploring the Problem Space </li>
+        <ul>
+          <li>The majority of responses to our survey and semi-structured interviews outline that the reasons for selecting a long layover are to save money (the price of a flight with a layover is usually cheaper), or that there are no direct
+            flights available to their destination.</li>
+          <li>In our interviews we found that many travelers like to talk to strangers, explore the airport, and sleep, not with the intention of meeting new people, satisfying curiosity, or recovering energy, but to find ways to spend their time
+            productively. </li>
+          <img src="img/surveyresults.png" alt="piechart" class="library">
+          <img src="img/longestlayover.png" alt="bargraph" class="library">
+          <img src="img/hierarchydia.png" alt="bargraph" class="library">
+        </ul>
+        <li>Brainstorming Solutions</li>
+        <ul>
+          <li>We have defined ‘young solo travelers’ as our primary user group. The key characteristics of this group is that they are often traveling alone, usually on a budget, and particularly open to knowledge or cultural exchanges.</li>
+          <img src="img/digitalnomad.png" alt="piechart" class="library">
+          <li> How might we...</li>
+          <ul>
+            <li>help people make connections at the airport?</li>
+            <li>promote social interactions during the entire layover journey?</li>
+            <li>leverage existing social networks to create more networks?</li>
+            <li>create an airport community of travelers across the globe?</li>
+          </ul>
+          <li>we used affinity mapping to group ideas and themes together to figure out potential directions of our solution</li>
+          <img src="img/affinityDiagramming.jpg" alt="piechart" class="library">
+          <li>we then created storyboards for our 3 very different solutions. One highlighted below:</li>
+          <img src="img/mystoryboard.png" alt="piechart" class="library">
+          <li>We put our design alternatives into a poster for the poster session where we got invaluable feedback from our peers and instructors.</li>
+          <img src="img/divergineposter.png" alt="poster" class="library">
+        </ul>
+        <li>Evaluation and Protoyping</li>
+
+        <ul>
+          <li>We used the feedback from the poster session to decide which direction to go in and make some improvements. </li>
+          <img src="img/solutionfeedback.jpg" alt="stickies" class="library">
+          <li>We then planned out the prototype, usability critera, and evaluation plan.</li>
+        </ul>
+        <li>Discount Evaluation</li>
+        <ul>
+          <li>focus group</li>
+          <li>expert review</li>
+          <li>participatorydesign</li>
+          <img src="img/participatorydesign.png" alt="piechart" class="library">
+        </ul>
+      </ol>
+      <br>
+      <h3>Outcome</h3>
+      <p>Find the poster we created <a href="img/paperplanesposter.pdf">here</a>. See Screenshots below</p>
+      <img src="img/folding.png" alt="folding" class="library">
+      <img src="img/takeoff.png" alt="takeoff" class="library">
+      <img src="img/viewoptions.png" alt="views" class="library">
     </div>
   </div>
   <script>
